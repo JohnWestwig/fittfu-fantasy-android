@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/home_standings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            app:backgroundTint="@color/standingsButton"
+            android:clickable="true"
+            android:src="@drawable/ic_view_list_white_24dp"
+            />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/home_lineup_edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            app:backgroundTint="@color/editLineupButton"
+            android:clickable="true"
+            android:src="@drawable/ic_edit_lineup_white_24dp"
+            />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/home_games_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            app:backgroundTint="@color/gamesButton"
+            android:clickable="true"
+            android:src="@drawable/ic_view_list_white_24dp"
+            />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/home_article_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+    </ListView>
+</LinearLayout>

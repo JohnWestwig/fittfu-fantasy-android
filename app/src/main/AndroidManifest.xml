@@ -8,13 +8,20 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".Activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activities.LeagueActivity"></activity>
+        <activity android:name=".Activities.LeagueSearchActivity"></activity>
+        <activity android:name=".Activities.HomeActivity"></activity>
+        <activity android:name=".Activities.StandingsActivity"></activity>
+        <activity android:name=".Activities.LineupActivity"></activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
