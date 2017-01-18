@@ -32,7 +32,7 @@ public class APIRequest implements Requestable {
     private static final String TAG = "API Request";
     //private static final String BASE_URL = "http://localhost:8000";
     //private static final String BASE_URL = "http://10.0.2.2:8000";
-    private static final String BASE_URL = "http://192.168.1.251:8000";
+    private static final String BASE_URL = "http://130.64.219.167:8000";
 
     private final Context context;
 
@@ -107,6 +107,5 @@ public class APIRequest implements Requestable {
     public Context getRequestContext() {
         return context;
     }
-
 
 }

@@ -30,6 +30,7 @@ public class LineupActivity extends AppCompatActivity {
     private Lineup lineup;
 
     private TextView nameTextView;
+    private TextView moneyTextView;
     private ProgressBar moneyProgressBar;
 
     private ListView playersListView;
@@ -47,6 +48,7 @@ public class LineupActivity extends AppCompatActivity {
 
         /* Initialize UI Elements */
         nameTextView = (TextView) findViewById(R.id.lineup_name_textView);
+        moneyTextView = (TextView) findViewById(R.id.lineup_money_textView);
         moneyProgressBar = (ProgressBar) findViewById(R.id.lineup_money_progressBar);
         playersListView = (ListView) findViewById(R.id.lineup_players_listView);
         playerArrayAdapter = new PlayerArrayAdapter(this, R.layout.player_template, players);
@@ -60,6 +62,10 @@ public class LineupActivity extends AppCompatActivity {
             @Override
             public void onCompleted(JSONObject response) {
                 lineup = new Lineup(response.optJSONObject("lineup"));
+                nameTextView.setText(lineup.getName());
+                moneyTextView.setText("$" + lineup.getMoneyRemaining() + " of " + "$" + lineup.getMoneyTotal() + " remaining");
+                moneyProgressBar.setMax(lineup.getMoneyTotal());
+                moneyProgressBar.setProgress(lineup.getMoneySpent());
                 loadPlayers(lineup.getId());
             }
         };

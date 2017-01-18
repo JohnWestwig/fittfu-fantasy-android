@@ -33,6 +33,10 @@ public class Lineup {
         return moneyTotal;
     }
 
+    public int getMoneyRemaining() {
+        return moneyTotal - moneySpent;
+    }
+
     public String getName() {
         return name;
     }
